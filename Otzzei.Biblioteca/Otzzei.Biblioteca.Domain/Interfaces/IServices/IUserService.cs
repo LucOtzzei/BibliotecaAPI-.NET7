@@ -12,5 +12,7 @@ namespace Otzzei.Biblioteca.Domain.Interfaces.IServices
     public interface IUserService
     {
         Task<Result<IdentityUser<Guid>>> CreateUserAsync(UserRequest request);
+        Task<Result<IdentityUser<Guid>>> UpdateUserAsync(Guid id, UserRequest request);
+
     }
 }

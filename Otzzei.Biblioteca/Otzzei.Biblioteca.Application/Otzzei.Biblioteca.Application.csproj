@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Otzze.Biblioteca.Infrastructure\Otzzei.Biblioteca.Infrastructure.csproj" />
     <ProjectReference Include="..\Otzzei.Biblioteca.Domain\Otzzei.Biblioteca.Domain.csproj" />
   </ItemGroup>
