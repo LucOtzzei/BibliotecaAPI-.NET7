@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Otzzei.Biblioteca.Infrastructure.Context;
 
 namespace Otzzei.Biblioteca.Application
 {
@@ -17,6 +18,8 @@ namespace Otzzei.Biblioteca.Application
 
             services.AddControllers();
 
+            var connectionString = Configuration.GetConnectionString("BibliotecaDB");
+            services.AddDbContext<BibliotecaContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddMvc(options =>
             {

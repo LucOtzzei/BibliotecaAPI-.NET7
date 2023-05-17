@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otzzei.Biblioteca.Application", "Otzzei.Biblioteca.Application\Otzzei.Biblioteca.Application.csproj", "{37CC2249-527D-473A-9F07-97088AB42A98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otzzei.Biblioteca.Domain", "Otzzei.Biblioteca.Domain\Otzzei.Biblioteca.Domain.csproj", "{3DF26EC8-C0FE-4970-850F-5D32F2C03B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otzzei.Biblioteca.Infrastructure", "Otzze.Biblioteca.Infrastructure\Otzzei.Biblioteca.Infrastructure.csproj", "{40CB59EA-BEE6-48B3-9AF2-81070565F907}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{37CC2249-527D-473A-9F07-97088AB42A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37CC2249-527D-473A-9F07-97088AB42A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37CC2249-527D-473A-9F07-97088AB42A98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF26EC8-C0FE-4970-850F-5D32F2C03B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF26EC8-C0FE-4970-850F-5D32F2C03B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF26EC8-C0FE-4970-850F-5D32F2C03B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF26EC8-C0FE-4970-850F-5D32F2C03B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CB59EA-BEE6-48B3-9AF2-81070565F907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CB59EA-BEE6-48B3-9AF2-81070565F907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CB59EA-BEE6-48B3-9AF2-81070565F907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CB59EA-BEE6-48B3-9AF2-81070565F907}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

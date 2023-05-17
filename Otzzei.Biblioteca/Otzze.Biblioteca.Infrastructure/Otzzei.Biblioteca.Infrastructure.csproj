@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Otzzei.Biblioteca.Domain\Otzzei.Biblioteca.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
