@@ -32,5 +32,11 @@ namespace Otzzei.Biblioteca.Domain.Services
             if (update.Succeeded) return Result.Ok(user);
             return Result.Fail("Falha ao atualizar o usuario");
         }
+        public async Task<Result<IdentityUser<Guid>>> GetUserByEmail(string email)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.NormalizedEmail  == email.ToUpper());
+            if (user != null) return Result.Ok(user);
+            return Result.Fail("Falha ao recuperar usuario");
+        }
     }
 }

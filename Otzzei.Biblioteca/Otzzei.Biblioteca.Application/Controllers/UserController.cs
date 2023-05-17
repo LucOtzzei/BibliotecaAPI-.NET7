@@ -22,9 +22,16 @@ namespace Otzzei.Biblioteca.Application.Controllers
             return BadRequest();
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUserAsync(Guid id, UserRequest request)
+        public async Task<IActionResult> UpdateUserAsync([FromRoute]Guid id, [FromBody]UserRequest request)
         {
             var user = await _userService.UpdateUserAsync(id, request);
+            if (user.IsSuccess) return Ok(user);
+            return BadRequest();
+        }
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetUserByEmail([FromQuery]string email)
+        {
+            var user = await _userService.GetUserByEmail(email);
             if (user.IsSuccess) return Ok(user);
             return BadRequest();
         }

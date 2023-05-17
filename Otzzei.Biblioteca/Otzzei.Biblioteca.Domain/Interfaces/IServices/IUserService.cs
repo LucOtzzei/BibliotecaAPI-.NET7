@@ -13,6 +13,6 @@ namespace Otzzei.Biblioteca.Domain.Interfaces.IServices
     {
         Task<Result<IdentityUser<Guid>>> CreateUserAsync(UserRequest request);
         Task<Result<IdentityUser<Guid>>> UpdateUserAsync(Guid id, UserRequest request);
-
+        Task<Result<IdentityUser<Guid>>> GetUserByEmail(string email);
     }
 }
