@@ -28,7 +28,7 @@ namespace Otzzei.Biblioteca.Application.Controllers
             if (user.IsSuccess) return Ok(user);
             return BadRequest();
         }
-        [HttpGet("{email}")]
+        [HttpGet]
         public async Task<IActionResult> GetUserByEmail([FromQuery]string email)
         {
             var user = await _userService.GetUserByEmail(email);
