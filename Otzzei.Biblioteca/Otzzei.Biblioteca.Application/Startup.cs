@@ -29,6 +29,7 @@ namespace Otzzei.Biblioteca.Application
                 .AddDefaultTokenProviders();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             services.AddMvc(options =>
             {
@@ -48,6 +49,7 @@ namespace Otzzei.Biblioteca.Application
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

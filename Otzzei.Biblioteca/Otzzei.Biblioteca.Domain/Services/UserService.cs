@@ -20,7 +20,7 @@ namespace Otzzei.Biblioteca.Domain.Services
         }
         public async Task<Result<IdentityUser<Guid>>> CreateUserAsync(UserRequest request)
         {
-            var user = new IdentityUser<Guid>() { Email = request.Email, UserName = request.Email };
+            var user = new IdentityUser<Guid>() { Email = request.Email, UserName = "Teste321" };
             var create = await _userManager.CreateAsync(user);
             if (create.Succeeded) return Result.Ok(user);
             return Result.Fail("Falha ao criar um usuario!");

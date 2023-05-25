@@ -11,5 +11,6 @@ namespace Otzzei.Biblioteca.Domain.Interfaces.IServices
     public interface IAuthService
     {
         Task<Result> CreateAccountPasswordAsync(string email, CreatePasswordRequest request);
+        Task<Result> LoginAsync(LoginRequest request);
     }
 }
