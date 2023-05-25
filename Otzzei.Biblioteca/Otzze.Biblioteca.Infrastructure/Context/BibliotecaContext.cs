@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Otzzei.Biblioteca.Domain.Entities;
 
 namespace Otzzei.Biblioteca.Infrastructure.Context
 {
@@ -13,6 +14,6 @@ namespace Otzzei.Biblioteca.Infrastructure.Context
     {
         public BibliotecaContext(DbContextOptions<BibliotecaContext> opts) : base(opts) { }
 
-
+        public DbSet<Author> Authors { get; set; }
     }
 }
