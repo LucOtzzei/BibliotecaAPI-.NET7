@@ -9,6 +9,7 @@ namespace Otzzei.Biblioteca.Domain.Entities
 {
     public class Author
     {
+        public Author() { }
         public Author(AuthorRequest request)
         {
             Id = Guid.NewGuid();
@@ -18,5 +19,11 @@ namespace Otzzei.Biblioteca.Domain.Entities
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Nationality { get; set; }
+
+        public void Update(AuthorRequest request)
+        {
+            Name = request.Name;
+            Nationality = request.Nationality;
+        }
     }
 }

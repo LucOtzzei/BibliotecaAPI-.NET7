@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Otzzei.Biblioteca.Domain.Interfaces.IRepository;
 using Otzzei.Biblioteca.Domain.Interfaces.IServices;
 using Otzzei.Biblioteca.Domain.Services;
 using Otzzei.Biblioteca.Infrastructure.Context;
+using Otzzei.Biblioteca.Infrastructure.Repository;
 
 namespace Otzzei.Biblioteca.Application
 {
@@ -30,6 +32,8 @@ namespace Otzzei.Biblioteca.Application
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<IAuthorRepository, AuthorRepository>();
 
             services.AddMvc(options =>
             {
