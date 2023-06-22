@@ -15,5 +15,6 @@ namespace Otzzei.Biblioteca.Infrastructure.Context
         public BibliotecaContext(DbContextOptions<BibliotecaContext> opts) : base(opts) { }
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<PublishingCompany> PublishingCompanys { get; set;}
     }
 }
