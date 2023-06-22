@@ -12,8 +12,8 @@ namespace Otzzei.Biblioteca.Domain.Interfaces.IServices
     public interface IPublishingCompanyService
     {
         Task<Result<PublishingCompanyResponse>> CreatePublishingCompanyAsync(PublishingCompanyRequest request);
-        Task<Result<PublishingCompanyResponse>> UpdatePublishingCompanyAsync(PublishingCompanyRequest request);
+        Task<Result<PublishingCompanyResponse>> UpdatePublishingCompanyAsync(Guid id, PublishingCompanyRequest request);
         Task<Result<PublishingCompanyResponse>> GetByIdPublishingCompanyAsync(Guid id);
-        Task<Result<List<PublishingCompanyResponse>>> GetPublishingCompanyAsync();
+        Task<Result<List<PublishingCompanyResponse>>> GetPublishersAsync();
     }
 }

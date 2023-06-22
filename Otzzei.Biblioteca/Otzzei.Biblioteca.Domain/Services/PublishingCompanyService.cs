@@ -51,7 +51,7 @@ namespace Otzzei.Biblioteca.Domain.Services
             }
         }
 
-        public async Task<Result<List<PublishingCompanyResponse>>> GetPublishingCompanyAsync()
+        public async Task<Result<List<PublishingCompanyResponse>>> GetPublishersAsync()
         {
             try
             {
@@ -65,10 +65,12 @@ namespace Otzzei.Biblioteca.Domain.Services
             }
         }
 
-        public async Task<Result<PublishingCompanyResponse>> UpdatePublishingCompanyAsync(PublishingCompanyRequest request)
+        public async Task<Result<PublishingCompanyResponse>> UpdatePublishingCompanyAsync(Guid id, PublishingCompanyRequest request)
         {
             try
-            {   var publishingCompany = new PublishingCompany(request);
+            {
+                var publishingCompany = await _publishingCompanyRepository.GetByIdPublishingCompanyAsync(id);
+                publishingCompany.Update(request);
                 var update = await _publishingCompanyRepository.UpdatePublishingCompanyAsync(publishingCompany);
 
                 var response = new PublishingCompanyResponse(update);
