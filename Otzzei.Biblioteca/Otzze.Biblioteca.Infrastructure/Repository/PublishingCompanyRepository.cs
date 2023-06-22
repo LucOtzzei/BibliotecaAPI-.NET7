@@ -19,24 +19,24 @@ namespace Otzzei.Biblioteca.Infrastructure.Repository
             _context = context;
         }
 
-        public async Task<PublishingCompany> CreatePublishingCompany(PublishingCompany publishingCompany)
+        public async Task<PublishingCompany> CreatePublishingCompanyAsync(PublishingCompany publishingCompany)
         {
             await _context.PublishingCompanys.AddAsync(publishingCompany);
             await _context.SaveChangesAsync();
             return publishingCompany;
         }
 
-        public async Task<PublishingCompany> GetByIdPublishingCompany(Guid id)
+        public async Task<PublishingCompany> GetByIdPublishingCompanyAsync(Guid id)
         {
             return await _context.PublishingCompanys.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<PublishingCompany>> GetPublishingCompany()
+        public async Task<List<PublishingCompany>> GetPublishersAsync()
         {
             return await _context.PublishingCompanys.ToListAsync();
         }
 
-        public async Task<PublishingCompany> UpdatePublishingCompany(PublishingCompany publishingCompany)
+        public async Task<PublishingCompany> UpdatePublishingCompanyAsync(PublishingCompany publishingCompany)
         {
             _context.PublishingCompanys.Update(publishingCompany);
             await _context.SaveChangesAsync();

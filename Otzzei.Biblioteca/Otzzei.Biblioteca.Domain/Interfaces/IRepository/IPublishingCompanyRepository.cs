@@ -10,9 +10,9 @@ namespace Otzzei.Biblioteca.Domain.Interfaces.IRepository
 {
     public interface IPublishingCompanyRepository
     {
-        Task<PublishingCompany> CreatePublishingCompany(PublishingCompany request);
-        Task<PublishingCompany> UpdatePublishingCompany(PublishingCompany request);
-        Task<PublishingCompany> GetByIdPublishingCompany(Guid id);
-        Task<List<PublishingCompany>> GetPublishingCompany();
+        Task<PublishingCompany> CreatePublishingCompanyAsync(PublishingCompany request);
+        Task<PublishingCompany> UpdatePublishingCompanyAsync(PublishingCompany request);
+        Task<PublishingCompany> GetByIdPublishingCompanyAsync(Guid id);
+        Task<List<PublishingCompany>> GetPublishersAsync();
     }
 }

@@ -1,4 +1,5 @@
-﻿using Otzzei.Biblioteca.Domain.Requests;
+﻿using Otzzei.Biblioteca.Domain.Entities;
+using Otzzei.Biblioteca.Domain.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace Otzzei.Biblioteca.Domain.Responses
 {
     public class PublishingCompanyResponse
     {
+        public PublishingCompanyResponse(PublishingCompany pb)
+        {
+            Name = pb.Name;
+        }
         public PublishingCompanyResponse(PublishingCompanyRequest request)
         {
             Name = request.Name;
