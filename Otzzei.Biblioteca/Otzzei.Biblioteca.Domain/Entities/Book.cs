@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Otzzei.Biblioteca.Domain.Enums;
+using Otzzei.Biblioteca.Domain.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +15,11 @@ namespace Otzzei.Biblioteca.Domain.Entities
         {
             Id = Guid.NewGuid();
             Name = request.Name;
-            Genre = request.Genre;
             AuthorId = request.AuthorId;
-            PublishingCompany = request.PublishedCompanyId;
+            PublishingCompanyId = request.PublishingCompanyId;
         }
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public GenreEnum Genre { get; set; }
         public Guid AuthorId { get; set; }
         public Author Author { get; set; }
         public Guid PublishingCompanyId {  get; set; }
