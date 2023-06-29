@@ -5,7 +5,7 @@ using Otzzei.Biblioteca.Domain.Requests;
 namespace Otzzei.Biblioteca.Application.Controllers
 {
     [ApiController]
-    [Route("[controller")]
+    [Route("[controller]")]
     public class BookController : ControllerBase
     {
         private readonly IBookService _bookService;
