@@ -1,4 +1,5 @@
-﻿using Otzzei.Biblioteca.Domain.Enums;
+﻿using Otzzei.Biblioteca.Domain.Entities;
+using Otzzei.Biblioteca.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace Otzzei.Biblioteca.Domain.Responses
 {
     public class GenreResponse
     {
+        public GenreResponse(Genre genre)
+        {
+            Genre = genre.GenreBook.ToString();
+        }
         public GenreResponse(GenreEnum genres)
         {
             Genre = genres.ToString();

@@ -15,7 +15,7 @@ namespace Otzzei.Biblioteca.Domain.Entities
             Id = Guid.NewGuid();
             Name = request.Name;
             AuthorId = request.AuthorId;
-            PublishingCompany = request.PublishedCompanyId;
+            PublishingCompanyId = request.PublishingCompanyId;
         }
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -23,5 +23,12 @@ namespace Otzzei.Biblioteca.Domain.Entities
         public Author Author { get; set; }
         public Guid PublishingCompanyId {  get; set; }
         public PublishingCompany PublishingCompany { get; set; }
+
+        public void Update(BookRequest request)
+        {
+            Name = request.Name;
+            AuthorId = request.AuthorId;
+            PublishingCompanyId = request.PublishingCompanyId;
+        }
     }
 }

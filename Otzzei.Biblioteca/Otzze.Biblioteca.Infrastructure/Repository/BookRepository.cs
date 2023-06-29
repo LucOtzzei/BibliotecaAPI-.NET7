@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Otzzei.Biblioteca.Domain.Entities;
+using Otzzei.Biblioteca.Domain.Enums;
 using Otzzei.Biblioteca.Domain.Interfaces.IRepository;
 using Otzzei.Biblioteca.Domain.Requests;
 using Otzzei.Biblioteca.Infrastructure.Context;
@@ -19,6 +20,12 @@ namespace Otzzei.Biblioteca.Infrastructure.Repository
             _context = context;
         }
 
+        public async Task AddGenreInBookAsync(Genre genre)
+        {
+            _context.GenreBooks.Add(genre);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task CreateBookAsync(Book request)
         {
             _context.Books.Add(request);
@@ -33,6 +40,11 @@ namespace Otzzei.Biblioteca.Infrastructure.Repository
         public async Task<Book> GetBookByIdAsync(Guid id)
         {
             return await _context.Books.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<List<Genre>> GetGenresBooksById(Guid id)
+        {
+            return await _context.GenreBooks.Where(x => x.BookId == id).ToListAsync();
         }
 
         public async Task UpdateBookAsync(Book request)
