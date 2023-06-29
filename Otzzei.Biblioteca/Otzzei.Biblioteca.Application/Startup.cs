@@ -36,6 +36,8 @@ namespace Otzzei.Biblioteca.Application
             services.AddScoped<IAuthorRepository, AuthorRepository>();
             services.AddScoped<IPublishingCompanyRepository, PublishingCompanyRepository>();
             services.AddScoped<IPublishingCompanyService, PublishingCompanyService>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IBookService, BookService>();
 
             services.AddMvc(options =>
             {
